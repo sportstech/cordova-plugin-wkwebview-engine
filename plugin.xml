@@ -18,9 +18,9 @@
 
     <!-- ios -->
     <platform name="ios">
-        <js-module src="src/www/ios/ios-wkwebview-exec.js" name="ios-wkwebview-exec">
+        <!-- <js-module src="src/www/ios/ios-wkwebview-exec.js" name="ios-wkwebview-exec">
             <clobbers target="cordova.exec" />
-        </js-module>
+        </js-module> -->
 
         <config-file target="config.xml" parent="/*">
             <feature name="CDVWKWebViewEngine">

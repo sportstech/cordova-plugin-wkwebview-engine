@@ -47,6 +47,9 @@
         if (NSClassFromString(@"WKWebView") == nil) {
             return nil;
         }
+        if (!IsAtLeastiOSVersion(@"9.0") && NSClassFromString(@"CDVLocalWebServer") == nil) {
+            return nil;
+        }
         self.uiDelegate = [[CDVWKWebViewUIDelegate alloc] initWithTitle:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]];
 
         WKUserContentController* userContentController = [[WKUserContentController alloc] init];
